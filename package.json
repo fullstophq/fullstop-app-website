@@ -1,0 +1,67 @@
+{
+  "name": "fullstop-app-website",
+  "description": "Product website for Fullstop",
+  "version": "1.0.0",
+  "author": "Jason Brown jason.brown@fullstopmedia.co>",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "tslint src/**/*.tsx --project tsconfig.json",
+    "precommit": "pretty-quick --staged && yarn lint",
+    "format": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write './**/*.{js,ts,graphql,gql,json}'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o public/docs"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-knobs": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
+    "@storybook/addons": "^3.4.10",
+    "@storybook/react": "^3.4.10",
+    "babel-plugin-styled-components": "^1.5.1",
+    "gatsby": "next",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-styled-components": "next",
+    "gatsby-plugin-typescript": "next",
+    "grid-styled": "^5.0.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.4.5",
+    "styled-normalize": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/grid-styled": "^4.2.1",
+    "@types/node": "^10.9.1",
+    "@types/react": "^16.4.11",
+    "@types/react-helmet": "^5.0.7",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-knobs": "^3.4.1",
+    "@types/storybook__addon-links": "^3.3.2",
+    "@types/storybook__addon-options": "^3.2.2",
+    "@types/storybook__react": "^3.0.9",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "storybook-styled-components": "^1.1.1",
+    "ts-loader": "^3.5.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
+}

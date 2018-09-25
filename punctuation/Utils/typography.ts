@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-
 export const BaseHeading = `
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
@@ -14,4 +12,5 @@ export const BaseParagraph = `
     font-stretch: normal;
     line-height: 1.75;
     letter-spacing: normal;
+    margin: 0;
 `

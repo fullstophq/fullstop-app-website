@@ -10034,6 +10034,10 @@ style-loader@^0.21.0:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
+styled-icons@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/styled-icons/-/styled-icons-2.4.0.tgz#8e9e47f92f1508fd1811af4539b35d091a4d9aca"
+
 styled-normalize@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/styled-normalize/-/styled-normalize-8.0.0.tgz#54881c9389540bf9fb2a3d34dca2e2d4d68601f2"

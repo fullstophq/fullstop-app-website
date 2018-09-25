@@ -1,19 +1,23 @@
 import styled from 'styled-components'
 
-const Heading = styled.h3`
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 30px;
+import { White } from '../../Utils/colors'
+
+const HeadingFont = `'Titillium Web', sans-serif`
+
+const Heading = styled.h1`
+  font-family: ${HeadingFont};
+  font-size: 48px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.2;
-  letter-spacing: normal;
-  color: #111111;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  color: ${White};
   margin: 0;
 `
 
 const SubHeading = styled.h5`
-  font-family: 'Titillium Web', sans-serif;
+  font-family: ${HeadingFont};
   font-size: 15px;
   font-weight: bold;
   font-style: normal;
@@ -29,4 +33,15 @@ const SubHeading = styled.h5`
   }
 `
 
-export { Heading, SubHeading }
+const HeadingThree = styled.h3`
+  font-family: ${HeadingFont};
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 34px;
+  letter-spacing: normal;
+  color: ${White};
+`
+
+export { Heading, SubHeading, HeadingThree }

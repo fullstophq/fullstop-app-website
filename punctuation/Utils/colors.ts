@@ -5,9 +5,9 @@ export const Heather = `rgba(164, 154, 171, 1)`
 export const CloudyBlue = `rgba(212, 202, 219, 1)`
 export const VeryLightPurple = `rgba(243, 233, 251, 1)`
 
+export const LightMustard = `rgba(243, 201, 105, 1)`
 export const OrangeYellowDark = `rgba(242, 184, 48, 1)`
 export const OrangeYellowLight = `rgba(242, 217, 157, 1)`
-export const LightMustard = `rgba(243, 201,05, 1)`
 
 export const VividCerulean = `rgba(0, 167, 225, 1)`
 export const Cerulean = `rgba(0, 143, 191, 1)`

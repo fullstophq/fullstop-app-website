@@ -9,21 +9,21 @@ const stories = storiesOf('Heading', module)
 
 stories.addDecorator(withKnobs)
 
-stories.add('with text', () => {
-  return (
-    <Heading>
-      {text('Label', 'The quick brown fo jumps over the lazy dog.')}
-    </Heading>
-  )
-})
+// stories.add('with text', () => {
+//   return (
+//     <Heading>
+//       {text('Label', 'The quick brown fo jumps over the lazy dog.')}
+//     </Heading>
+//   )
+// })
 
-stories.add('with subheading', () => {
-  return (
-    <React.Fragment>
-      <SubHeading>{text('Label', 'intelligent data capture')}</SubHeading>
-      <Heading>
-        {text('Label', 'Meet content owners in their natural environment')}
-      </Heading>
-    </React.Fragment>
-  )
-})
+// stories.add('with subheading', () => {
+//   return (
+//     <React.Fragment>
+//       <SubHeading>{text('Label', 'intelligent data capture')}</SubHeading>
+//       <Heading>
+//         {text('Label', 'Meet content owners in their natural environment')}
+//       </Heading>
+//     </React.Fragment>
+//   )
+// })

@@ -7,7 +7,7 @@ const HeadingFont = `'Titillium Web', sans-serif`
 const Heading = styled.h1`
   font-family: ${HeadingFont};
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-stretch: normal;
   line-height: 52px;
@@ -19,7 +19,7 @@ const Heading = styled.h1`
 const SubHeading = styled.h5`
   font-family: ${HeadingFont};
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.6;
@@ -36,12 +36,34 @@ const SubHeading = styled.h5`
 const HeadingThree = styled.h3`
   font-family: ${HeadingFont};
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  line-height: 34px;
+  line-height: 28px;
   letter-spacing: normal;
   color: ${White};
 `
 
-export { Heading, SubHeading, HeadingThree }
+const HeadingFour = styled.h4`
+  font-family: ${HeadingFont};
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: ${White};
+`
+
+const HeadingFive = styled.h5`
+  font-family: ${HeadingFont};
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: ${White};
+`
+
+export { Heading, SubHeading, HeadingThree, HeadingFour, HeadingFive }

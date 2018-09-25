@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import { VividCerulean } from '../Utils/colors'
 
 export const InputField = styled.input`
-  width: 280px;
+  width: 331px;
   border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   border: solid 1px #d8d8dc;
 

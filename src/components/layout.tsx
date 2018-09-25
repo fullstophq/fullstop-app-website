@@ -5,8 +5,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import { graphql, StaticQuery } from 'gatsby'
+import { Box, Flex } from 'grid-styled'
 
-import Footer from './footer'
+import Footer from './Footer'
 
 // Normalise layout styles
 const GlobalStyle = createGlobalStyle`
@@ -23,12 +24,10 @@ body{
 }
 `
 
-const PageContent = styled.div`
+const PageContent = styled(Flex)`
   position: absolute;
   top: 0;
   bottom: 0;
-  height: 100%;
-  width: 100%;
 `
 
 const Layout = ({ children }) => (
@@ -73,9 +72,12 @@ const Layout = ({ children }) => (
             rel="stylesheet"
           />
         </Helmet>
-        <PageContent>
+        <PageContent flexDirection="column">
           <GlobalStyle />
-          <Footer />
+          <Box>{children}</Box>
+          <Box style={{ width: '100%', height: '100%' }}>
+            <Footer />
+          </Box>
         </PageContent>
       </>
     )}

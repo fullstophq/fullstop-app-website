@@ -7,8 +7,8 @@ import { BaseParagraph } from '../../Utils/typography'
 export const FooterStatement = styled.p`
   ${BaseParagraph};
   color: ${White};
-  font-size: 24px;
-  line-height: 1.42;
+  font-size: 18px;
+  line-height: 28px;
   letter-spacing: -0.2px;
 `
 
@@ -17,7 +17,8 @@ export const FooterLabel = styled.p`
   color: ${White};
   height: 28px;
   margin: 0;
-  line-height: 2.4;
+  line-height: 28px;
+  text-align: center;
 `
 
 export const FooterLink = styled(Link)`
@@ -27,8 +28,9 @@ export const FooterLink = styled(Link)`
   font-weight: 600;
   cursor: pointer;
   height: 28px;
-  line-height: 2.4;
+  line-height: 28px;
   text-decoration: none;
+  text-align: center;
 
   & :hover {
     text-decoration: underline;

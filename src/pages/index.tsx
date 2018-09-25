@@ -11,12 +11,10 @@ import Illustration from '../images/illustration.png'
 
 const HeroTitle = styled(Heading)`
   color: ${RaisinBlack};
-  width: 672px;
   height: 104px;
 `
 
 const HeroParagraph = styled.p`
-  width: 672px;
   height: 112px;
   font-family: 'Titillium Web', sans-serif;
   font-size: 24px;

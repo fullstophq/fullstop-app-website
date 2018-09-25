@@ -7,7 +7,7 @@ import {
   LightMustard,
   OrangeYellowDark,
   OrangeYellowLight,
-} from '../utils/colors'
+} from '../Utils/colors'
 
 const DividerWrapper = styled(Flex)`
   background-color: ${OrangeYellowLight};

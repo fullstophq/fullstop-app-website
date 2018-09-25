@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Helmet from 'react-helmet'
-import styled, { injectGlobal } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import { graphql, StaticQuery } from 'gatsby'
@@ -9,15 +9,26 @@ import { graphql, StaticQuery } from 'gatsby'
 import Footer from './footer'
 
 // Normalise layout styles
-// tslint:disable-next-line:no-unused-expression
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
+
+  html{
+    min-height:100%;
+    min-width: 100%;
+    position:relative;
+}
+body{
+    height:100%;
+    width: 100%;
+}
 `
 
 const PageContent = styled.div`
-  position: relative;
-  height: 200vh;
-  width: 100vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 `
 
 const Layout = ({ children }) => (
@@ -35,7 +46,11 @@ const Layout = ({ children }) => (
     `}
     render={(data: {
       site: {
-        siteMetadata: { title: string; description: string; keywords: string }
+        siteMetadata: {
+          title: string
+          description: string
+          keywords: string
+        }
       }
     }) => (
       <>
@@ -46,7 +61,10 @@ const Layout = ({ children }) => (
               name: 'description',
               content: data.site.siteMetadata.description,
             },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
+            {
+              name: 'keywords',
+              content: data.site.siteMetadata.keywords,
+            },
           ]}
         >
           <html lang="en" />
@@ -56,7 +74,7 @@ const Layout = ({ children }) => (
           />
         </Helmet>
         <PageContent>
-          {children}
+          <GlobalStyle />
           <Footer />
         </PageContent>
       </>

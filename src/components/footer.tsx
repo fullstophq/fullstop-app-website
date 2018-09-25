@@ -29,7 +29,7 @@ const FooterWrapper = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   padding-left: 195px;
   padding-right: 195px;
 `

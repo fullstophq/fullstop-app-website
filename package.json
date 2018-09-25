@@ -12,7 +12,7 @@
     "develop": "gatsby develop",
     "lint": "tslint src/**/*.tsx --project tsconfig.json",
     "precommit": "pretty-quick --staged && yarn lint",
-    "format": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write './**/*.{js,ts,graphql,gql,json}'",
+    "format": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write './**/*.{js,ts,tsx,graphql,gql,json}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o public/docs"
@@ -35,7 +35,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.4.5",
+    "styled-components": "^4.0.0-beta.9",
     "styled-icons": "^2.4.0",
     "styled-normalize": "^8.0.0"
   },
@@ -52,7 +52,8 @@
     "awesome-typescript-loader": "^5.2.0",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "prettier": "^1.14.2",
+    "prettier": "^1.14.3",
+    "prettier-tslint": "^0.4.0",
     "pretty-quick": "^1.6.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "storybook-styled-components": "^1.1.1",

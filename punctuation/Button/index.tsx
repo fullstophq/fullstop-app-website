@@ -13,13 +13,13 @@ const styledComponentWithProps = <
   TProps extends object = {},
   U extends HTMLElement = HTMLElement
 >(
-  styledFunction: ThemedStyledFunction<any, any> // tslint:disable-line no-any
+  styledFunction: ThemedStyledFunction<any, any>, // tslint:disable-line no-any
 ): ThemedStyledFunction<SProps & React.HTMLProps<U>, TProps> => {
   return styledFunction
 }
 
 export const PrimaryButton = styledComponentWithProps<PrimaryButtonProps>(
-  styled.button
+  styled.button,
 )`
   background-color: ${VividCerulean};
   border-top-right-radius: 3px;

@@ -37,10 +37,16 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify-cache',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [`Titillium+Web\:400,400i,600,600i,700,700i`],
+        fonts: [
+          {
+            family: `Titillium+Web`,
+            variants: [`400`, `400i`, `600`, `600i`, `700`, `700i`],
+          },
+        ],
       },
     },
     {

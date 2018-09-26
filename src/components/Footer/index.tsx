@@ -15,7 +15,6 @@ import {
 } from '../../../punctuation/Typography/Heading'
 import {
   FooterLabel,
-  FooterLink,
   FooterStatement,
 } from '../../../punctuation/Typography/Paragraph'
 import {
@@ -26,7 +25,6 @@ import {
 import { BaseParagraph } from '../../../punctuation/Utils/typography'
 
 import Background from '../../images/background-gradient.svg'
-import Logo from '../../images/logo-inverse.svg'
 
 const FooterWrapper = styled(Flex)`
   background-color: ${DirtyPurple};
@@ -42,7 +40,6 @@ const ContactFormWrapper = styled(Flex)`
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
   margin-top: 27px;
   margin-bottom: 26px;
-  width: 375px;
 `
 const ContactFormLabel = styled.p`
   ${BaseParagraph};
@@ -52,14 +49,8 @@ const ContactFormLabel = styled.p`
   font-stretch: normal;
   line-height: 21px;
   letter-spacing: normal;
-  color: #ffffff;
+  color: ${White};
   opacity: 0.8;
-`
-
-const FooterFullstopLogo = styled.div`
-  background: url(${Logo}) no-repeat;
-  width: 111px;
-  height: 32px;
 `
 
 export default () => (
@@ -68,29 +59,38 @@ export default () => (
       <Box mt="34px" pl="18px" pr="18px">
         <Divider />
       </Box>
-      <Flex flexDirection="column" alignItems="flex-start">
-        <Box pl="18px" pr="18px">
-          <HeadingThree>Would you like to try it?</HeadingThree>
-          <FooterStatement>
-            We’re launching a private beta in <strong>Q4 2018</strong>, free for
-            anyone interested, with a full release of the platform later in
-            2019.
-          </FooterStatement>
-        </Box>
-        <Box pl="18px" pr="18px">
-          <HeadingFour>Get access as soon as we launch.</HeadingFour>
-          <ContactFormWrapper flexDirection="column">
-            <Box flex="1">
-              <InputField placeholder="Email address" />
-            </Box>
-            <Box>
-              <PrimaryButton style={{ width: '100%' }}>Notify me</PrimaryButton>
-            </Box>
-          </ContactFormWrapper>
-          <ContactFormLabel>
-            We promise to send you only updates about our launch, nothing more.
-          </ContactFormLabel>
-        </Box>
+      <Flex flexDirection="column" alignItems="center" justifyContent="center">
+        <Flex
+          flexDirection="column"
+          alignItems="flex-start"
+          justifyContent="center"
+        >
+          <Box pl="18px" pr="18px" flex="1">
+            <HeadingThree>Would you like to try it?</HeadingThree>
+            <FooterStatement>
+              We’re launching a private beta in <strong>Q4 2018</strong>, free
+              for anyone interested, with a full release of the platform later
+              in 2019.
+            </FooterStatement>
+          </Box>
+          <Box pl="18px" pr="18px" flex="1">
+            <HeadingFour>Get access as soon as we launch.</HeadingFour>
+            <ContactFormWrapper flexDirection="column">
+              <Box flex="1">
+                <InputField placeholder="Email address" />
+              </Box>
+              <Box>
+                <PrimaryButton style={{ width: '100%' }}>
+                  Notify me
+                </PrimaryButton>
+              </Box>
+            </ContactFormWrapper>
+            <ContactFormLabel>
+              We promise to send you only updates about our launch, nothing
+              more.
+            </ContactFormLabel>
+          </Box>
+        </Flex>
         <Box style={{ width: '100%' }}>
           <Flex
             style={{ width: '100%' }}

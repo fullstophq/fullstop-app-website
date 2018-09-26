@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { White } from '../../Utils/colors'
+import { PurplishGrey, White } from '../../Utils/colors'
 
 const HeadingFont = `'Titillium Web', sans-serif`
 
@@ -24,7 +24,7 @@ const SubHeading = styled.h5`
   font-stretch: normal;
   line-height: 1.6;
   letter-spacing: 1px;
-  color: #555555;
+  color: ${PurplishGrey};
   text-transform: uppercase;
   margin: 0;
 

@@ -8,6 +8,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { Box, Flex } from 'grid-styled'
 
 import Footer from './Footer'
+import Header from './Header'
 
 // Normalise layout styles
 const GlobalStyle = createGlobalStyle`
@@ -17,17 +18,12 @@ const GlobalStyle = createGlobalStyle`
     min-height:100%;
     min-width: 100%;
     position:relative;
-}
-body{
-    height:100%;
-    width: 100%;
-}
-`
+  }
 
-const PageContent = styled(Flex)`
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  body{
+      height:100%;
+      width: 100%;
+  }
 `
 
 const Layout = ({ children }) => (
@@ -52,7 +48,7 @@ const Layout = ({ children }) => (
         }
       }
     }) => (
-      <>
+      <Flex>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -72,14 +68,17 @@ const Layout = ({ children }) => (
             rel="stylesheet"
           />
         </Helmet>
-        <PageContent flexDirection="column">
+        <Flex flexDirection="column">
           <GlobalStyle />
+          <Box style={{ width: '100%', height: '100%' }}>
+            <Header />
+          </Box>
           <Box>{children}</Box>
           <Box style={{ width: '100%', height: '100%' }}>
             <Footer />
           </Box>
-        </PageContent>
-      </>
+        </Flex>
+      </Flex>
     )}
   />
 )

@@ -44,7 +44,7 @@ const IndexPage = () => (
         }}
       />
     </Box>
-    <Box mt="232px" mb="18px" mx="18px">
+    <Box mt="232px" mb="18px">
       <HeroTitle>
         Spend less time chasing content owners over licensing rights.
       </HeroTitle>
@@ -61,7 +61,7 @@ const IndexPage = () => (
           }}
         />
       </Box>
-      <Box>
+      <Box mx="18px">
         <ExplanationBlock
           subHeading="Intelligent data capture"
           heading="Meet content owners in their natural environment."
@@ -80,7 +80,7 @@ const IndexPage = () => (
           }}
         />
       </Box>
-      <Box>
+      <Box mx="18px">
         <ExplanationBlock
           subHeading="Automatic content processing"
           heading="Speed up content audits by leveraging clever automation."
@@ -98,7 +98,7 @@ const IndexPage = () => (
           }}
         />
       </Box>
-      <Box>
+      <Box mx="18px">
         <ExplanationBlock
           subHeading="Fully asynchronous workflow"
           heading="Be the first. Beat the competition."

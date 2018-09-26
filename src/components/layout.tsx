@@ -63,10 +63,6 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,600i,700,700i"
-            rel="stylesheet"
-          />
         </Helmet>
         <Flex flexDirection="column">
           <GlobalStyle />

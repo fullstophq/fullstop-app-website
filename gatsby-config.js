@@ -1,15 +1,27 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://fullstop.app',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 module.exports = {
   siteMetadata: {
     title:
       'Simplify the acquisition of licensing rights to user generated content - fullstop',
     description:
       'We simplify the acquisition of licensing rights to user generated content. Dependable services for publishers and media organisations.',
-    keywords: 'viral video, video acquisition, video licensing',
+    keywords:
+      'viral video, video acquisition, video licensing, facebook, youtube, twitter, messenger bot, bots',
+    siteUrl: siteUrl,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
+    'gatsby-plugin-polyfill-io',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -23,5 +35,43 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-netlify-cache',
+    'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Titillium+Web\:400,400i,600,600i,700,700i`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `rgba(0, 167, 225, 1)`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
   ],
 }

@@ -66,7 +66,14 @@ const Layout = ({ children }) => (
         </Helmet>
         <Flex flexDirection="column">
           <GlobalStyle />
-          <Box style={{ width: '100%', height: '100%' }}>
+          <Box
+            style={{
+              position: 'absolute',
+              top: '18px',
+              left: '18px',
+              zIndex: 1,
+            }}
+          >
             <Header />
           </Box>
           <Box>{children}</Box>

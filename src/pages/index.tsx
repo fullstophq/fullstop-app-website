@@ -1,16 +1,13 @@
+import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
 
+import { graphql, StaticQuery } from 'gatsby'
 import { Box, Flex } from 'grid-styled'
-
 import { Heading } from '../../punctuation/Typography/Heading'
 import { RaisinBlack } from '../../punctuation/Utils/colors'
 
 import ExplanationBlock from '../components/ExplanationBlock'
-import IllustrationHeader from '../images/illustration-header@2x.png'
-import IllustrationStepOne from '../images/illustration-step-1@2x.png'
-import IllustrationStepTwo from '../images/illustration-step-2@2x.png'
-import IllustrationStepThree from '../images/illustration-step-3@2x.png'
 
 const HeroTitle = styled(Heading)`
   color: ${RaisinBlack};
@@ -29,22 +26,38 @@ const Paragraph = styled.p`
   color: ${RaisinBlack};
 `
 
-const IndexPage = () => (
+const IndexPage = ({
+  IllustrationHeader,
+  IllustrationStepOne,
+  IllustrationStepTwo,
+  IllustrationStepThree,
+}: {
+  IllustrationHeader: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+  IllustrationStepOne: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+  IllustrationStepTwo: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+  IllustrationStepThree: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+}) => (
   <Flex flexDirection="column">
     <Box>
-      <img
-        src={IllustrationHeader}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          width: '100%',
-          zIndex: -1,
-        }}
-      />
+      <Img fluid={IllustrationHeader.childImageSharp.fluid} />
     </Box>
-    <Box mt="232px" mb="18px">
+    <Box mt="18px" mb="18px">
       <Box mx="18px">
         <HeroTitle>
           Spend less time chasing content owners over licensing rights.
@@ -56,12 +69,7 @@ const IndexPage = () => (
         </Paragraph>
       </Box>
       <Box>
-        <img
-          src={IllustrationStepOne}
-          style={{
-            width: '100%',
-          }}
-        />
+        <Img fluid={IllustrationStepOne.childImageSharp.fluid} />
       </Box>
       <Box mx="18px">
         <ExplanationBlock
@@ -75,12 +83,7 @@ const IndexPage = () => (
         />
       </Box>
       <Box>
-        <img
-          src={IllustrationStepTwo}
-          style={{
-            width: '100%',
-          }}
-        />
+        <Img fluid={IllustrationStepTwo.childImageSharp.fluid} />
       </Box>
       <Box mx="18px">
         <ExplanationBlock
@@ -93,12 +96,7 @@ const IndexPage = () => (
         />
       </Box>
       <Box>
-        <img
-          src={IllustrationStepThree}
-          style={{
-            width: '100%',
-          }}
-        />
+        <Img fluid={IllustrationStepThree.childImageSharp.fluid} />
       </Box>
       <Box mx="18px">
         <ExplanationBlock
@@ -114,4 +112,69 @@ const IndexPage = () => (
   </Flex>
 )
 
-export default IndexPage
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query ExplanationIllustrations {
+        IllustrationHeader: file(
+          relativePath: { eq: "illustration-header@2x.png" }
+        ) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        IllustrationStepOne: file(
+          relativePath: { eq: "illustration-step-1@2x.png" }
+        ) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        IllustrationStepTwo: file(
+          relativePath: { eq: "illustration-step-2@2x.png" }
+        ) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        IllustrationStepThree: file(
+          relativePath: { eq: "illustration-step-3@2x.png" }
+        ) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    `}
+    render={(data: {
+      IllustrationHeader: {
+        childImageSharp: {
+          fluid: object
+        }
+      }
+      IllustrationStepOne: {
+        childImageSharp: {
+          fluid: object
+        }
+      }
+      IllustrationStepTwo: {
+        childImageSharp: {
+          fluid: object
+        }
+      }
+      IllustrationStepThree: {
+        childImageSharp: {
+          fluid: object
+        }
+      }
+    }) => IndexPage(data)}
+  />
+)

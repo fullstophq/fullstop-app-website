@@ -12,7 +12,7 @@ const HeaderFullStopLogo = styled.img`
 
 export default () => (
   <Flex>
-    <Box ml="18px" mt="16px">
+    <Box>
       <HeaderFullStopLogo src={Logo} alt="fullstop" />
     </Box>
   </Flex>

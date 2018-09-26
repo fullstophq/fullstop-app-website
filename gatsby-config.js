@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://fullstop.app',
@@ -34,6 +36,15 @@ module.exports = {
         icon: 'src/images/fullstop-icon.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify-cache',
     'gatsby-plugin-netlify',

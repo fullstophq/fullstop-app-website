@@ -18,6 +18,7 @@
     "storybook:build": "build-storybook -c .storybook -o public/docs"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-knobs": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
@@ -25,7 +26,7 @@
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "babel-plugin-styled-components": "^1.5.1",
-    "gatsby": "next",
+    "gatsby": "^2.0.9",
     "gatsby-image": "^2.0.10",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-netlify": "^2.0.0",
@@ -40,6 +41,7 @@
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-plugin-styled-components": "next",
     "gatsby-plugin-typescript": "next",
+    "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-sharp": "^2.1.2",
     "grid-styled": "^5.0.2",
     "react": "^16.4.2",

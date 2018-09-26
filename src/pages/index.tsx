@@ -45,14 +45,16 @@ const IndexPage = () => (
       />
     </Box>
     <Box mt="232px" mb="18px">
-      <HeroTitle>
-        Spend less time chasing content owners over licensing rights.
-      </HeroTitle>
-      <Paragraph>
-        Fullstop simplifies and speeds up the acquisition of licensing rights to
-        user generated content for publishers and media organisations.{' '}
-        <strong>From days to a few minutes.</strong>
-      </Paragraph>
+      <Box mx="18px">
+        <HeroTitle>
+          Spend less time chasing content owners over licensing rights.
+        </HeroTitle>
+        <Paragraph>
+          Fullstop simplifies and speeds up the acquisition of licensing rights
+          to user generated content for publishers and media organisations.{' '}
+          <strong>From days to a few minutes.</strong>
+        </Paragraph>
+      </Box>
       <Box>
         <img
           src={IllustrationStepOne}

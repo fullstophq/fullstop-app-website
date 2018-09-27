@@ -77,7 +77,12 @@ export default () => (
             <HeadingFour>Get access as soon as we launch.</HeadingFour>
             <ContactFormWrapper flexDirection="column">
               <Box flex="1">
-                <InputField placeholder="Email address" />
+                <InputField
+                  id="email"
+                  type="email"
+                  placeholder="Email address"
+                  tabindex="1"
+                />
               </Box>
               <Box>
                 <PrimaryButton style={{ width: '100%' }}>
@@ -180,7 +185,10 @@ export default () => (
                   target="_blank"
                   title="Fullstop's Medium Publication"
                 >
-                  <Medium style={{ height: '38px', color: White }} alt="Medium" />
+                  <Medium
+                    style={{ height: '38px', color: White }}
+                    alt="Medium"
+                  />
                 </a>
               </Box>
               <Box mx={2}>
@@ -190,7 +198,10 @@ export default () => (
                   target="_blank"
                   title="Fullstop's Twitter Account"
                 >
-                  <Twitter style={{ height: '38px', color: White }} alt="Twitter" />
+                  <Twitter
+                    style={{ height: '38px', color: White }}
+                    alt="Twitter"
+                  />
                 </a>
               </Box>
             </Flex>

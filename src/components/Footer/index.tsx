@@ -174,12 +174,20 @@ export default () => (
               }}
             >
               <Box mx={2}>
-                <a href="https://medium.com/thefullstop" target="_blank">
+                <a
+                  href="https://medium.com/thefullstop"
+                  rel="noopener"
+                  target="_blank"
+                >
                   <Medium style={{ height: '38px', color: White }} />
                 </a>
               </Box>
               <Box mx={2}>
-                <a href="https://twitter.com/fullstopmediahq" target="_blank">
+                <a
+                  href="https://twitter.com/fullstopmediahq"
+                  rel="noopener"
+                  target="_blank"
+                >
                   <Twitter style={{ height: '38px', color: White }} />
                 </a>
               </Box>

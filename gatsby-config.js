@@ -23,7 +23,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-polyfill-io',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

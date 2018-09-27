@@ -9,6 +9,29 @@ import { RaisinBlack } from '../../punctuation/Utils/colors'
 
 import ExplanationBlock from '../components/ExplanationBlock'
 
+interface IndexPageProps {
+  IllustrationHeader: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+  IllustrationStepOne: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+  IllustrationStepTwo: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+  IllustrationStepThree: {
+    childImageSharp: {
+      fluid: object
+    }
+  }
+}
+
 const HeroTitle = styled(Heading)`
   color: ${RaisinBlack};
   font-size: 28px;
@@ -31,28 +54,7 @@ const IndexPage = ({
   IllustrationStepOne,
   IllustrationStepTwo,
   IllustrationStepThree,
-}: {
-  IllustrationHeader: {
-    childImageSharp: {
-      fluid: object
-    }
-  }
-  IllustrationStepOne: {
-    childImageSharp: {
-      fluid: object
-    }
-  }
-  IllustrationStepTwo: {
-    childImageSharp: {
-      fluid: object
-    }
-  }
-  IllustrationStepThree: {
-    childImageSharp: {
-      fluid: object
-    }
-  }
-}) => (
+}: IndexPageProps) => (
   <Flex flexDirection="column">
     <Box>
       <Img fluid={IllustrationHeader.childImageSharp.fluid} />

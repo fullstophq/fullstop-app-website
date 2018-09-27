@@ -178,8 +178,9 @@ export default () => (
                   href="https://medium.com/thefullstop"
                   rel="noopener"
                   target="_blank"
+                  title="Fullstop's Medium Publication"
                 >
-                  <Medium style={{ height: '38px', color: White }} />
+                  <Medium style={{ height: '38px', color: White }} alt="Medium" />
                 </a>
               </Box>
               <Box mx={2}>
@@ -187,8 +188,9 @@ export default () => (
                   href="https://twitter.com/fullstopmediahq"
                   rel="noopener"
                   target="_blank"
+                  title="Fullstop's Twitter Account"
                 >
-                  <Twitter style={{ height: '38px', color: White }} />
+                  <Twitter style={{ height: '38px', color: White }} alt="Twitter" />
                 </a>
               </Box>
             </Flex>

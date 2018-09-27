@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Helmet from 'react-helmet'
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import { graphql, StaticQuery } from 'gatsby'
